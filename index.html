@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashOnPoint</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("FASHONPOINTBG.jpg") no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Remove underline from links */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:visited, a:active {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Auth Buttons */
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-buttons button {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .auth-buttons .sign-in:hover {
+            background: white;
+            color: black;
+        }
+
+        .auth-buttons .sign-up {
+            background: #ff4d6d;
+            border-color: #ff4d6d;
+        }
+
+        .auth-buttons .sign-up:hover {
+            background: white;
+            color: #ff4d6d;
+        }
+
+        /* Menu Section */
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+
+        /* Menu Items - Transparent & Stylish */
+        .menu-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            height: 350px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Hover Effect */
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Image Styling */
+        .menu-item img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0.9;
+        }
+
+        /* Text Overlay */
+        .menu-item h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0 5px;
+        }
+
+        /* More of This Button */
+        .menu-item p {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px;
+            border-radius: 20px;
+            width: 80%;
+            margin: 10px auto;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .menu-item p:hover {
+            background: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FashOnPoint</h1>
+        <div class="auth-buttons">
+            <button class="sign-in">Sign In</button>
+            <button class="sign-up">Sign Up</button>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="menu-item">
+            <a href="watch.html">    
+                <h2><b>Watch</b></h2>
+                <img src="watch.jpg" alt="Stylish Watch">
+                <p>More of This</p>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="clothes.html">
+                <h2><b>Clothes</b></h2>
+                <img src="clothes.jpg" alt="Trendy Clothes">
+                <p>More of This</p>
+            </a>
+        </div>
+        <div class="menu-item">
+            <a href="shoes.html">
+                <h2><b>Shoes</b></h2>
+                <img src="shoes.png" alt="Fashionable Shoes">
+                <p>More of This</p>
+            </a>
+        </div>
+    </div>
+
+    <div>
+        </div>
+
+    <footer>
+        <p>&copy; 2025 FashOnPoint. All rights reserved.</p>
+    </footer>
+</body>
+</html>

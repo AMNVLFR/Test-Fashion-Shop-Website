@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watches - FashOnPoint</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("watchbg.png") no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .back-button {
+            background: transparent;
+            border: 2px solid white;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: white;
+            color: black;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin: 30px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 90%;
+            margin: auto;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .watch-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 260px;
+            height: 380px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            backdrop-filter: blur(10px);
+            flex-shrink: 0;
+        }
+
+        .watch-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .watch-item img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .watch-item h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 10px 0;
+        }
+
+        .watch-item p {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px;
+            border-radius: 20px;
+            width: 80%;
+            margin: 10px auto;
+            font-weight: bold;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .arrow:hover {
+            background: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+
+        .left-arrow {
+            left: -30px;
+        }
+
+        .right-arrow {
+            right: -30px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stylish Watches</h1>
+        <a href="index.html"><button class="back-button">Back to Home</button></a>
+    </header>
+
+    <h2 class="section-title">Top Watch Brands</h2>
+    <div class="slider-wrapper">
+        <button class="arrow left-arrow" onclick="scrollSlider('top-brands', -300)">&#10094;</button>
+        <div class="slider-container" id="top-brands">
+            <div class="watch-item"><img src="rolex_logo.webp"><h2>Rolex</h2><p>Luxury & Prestige</p></div>
+            <div class="watch-item"><img src="omega_logo.jpg"><h2>Omega</h2><p>Timeless Elegance</p></div>
+            <div class="watch-item"><img src="cartier_logo.png"><h2>Cartier</h2><p>Elegance & Style</p></div>
+            <div class="watch-item"><img src="tag_logo.jpg"><h2>TAG Heuer</h2><p>Sports & Performance</p></div>
+            <div class="watch-item"><img src="patek_logo.jpg"><h2>Patek Philippe</h2><p>Swiss Luxury</p></div>
+        </div>
+        <button class="arrow right-arrow" onclick="scrollSlider('top-brands', 300)">&#10095;</button>
+    </div>
+
+    <h2 class="section-title">All Watch Brands</h2>
+    <div class="slider-wrapper">
+        <button class="arrow left-arrow" onclick="scrollSlider('all-brands', -300)">&#10094;</button>
+        <div class="slider-container" id="all-brands">
+            <div class="watch-item"><img src="rolex_logo.webp"><h2>Rolex</h2><p>Luxury & Prestige</p></div>
+            <div class="watch-item"><img src="omega_logo.jpg"><h2>Omega</h2><p>Timeless Elegance</p></div>
+            <div class="watch-item"><img src="cartier_logo.png"><h2>Cartier</h2><p>Elegance & Style</p></div>
+            <div class="watch-item"><img src="tag_logo.jpg"><h2>TAG Heuer</h2><p>Sports & Performance</p></div>
+            <div class="watch-item"><img src="patek_logo.jpg"><h2>Patek Philippe</h2><p>Swiss Luxury</p></div>
+
+            <div class="watch-item"><img src="audemars_logo.jpg"><h2>Audemars Piguet</h2><p>Haute Horology</p></div>
+            <div class="watch-item"><img src="breitling_logo.jpg"><h2>Breitling</h2><p>Aviation & Performance</p></div>
+            <div class="watch-item"><img src="seiko_logo.jpg"><h2>Seiko</h2><p>Affordable & Reliable</p></div>
+            <div class="watch-item"><img src="tissot_logo.jpg"><h2>Tissot</h2><p>Swiss Innovation</p></div>
+            <div class="watch-item"><img src="casio_logo.jpg"><h2>Casio</h2><p>Digital & Classic</p></div>
+
+            <div class="watch-item"><img src="hublot_logo.jpg"><h2>Hublot</h2><p>Modern Luxury</p></div>
+            <div class="watch-item"><img src="panerai_logo.jpg"><h2>Panerai</h2><p>Bold & Distinctive</p></div>
+            <div class="watch-item"><img src="iwc_logo.jpg"><h2>IWC Schaffhausen</h2><p>Engineering Excellence</p></div>
+            <div class="watch-item"><img src="vacheron_logo.jpg"><h2>Vacheron Constantin</h2><p>Oldest Swiss Watchmaker</p></div>
+            <div class="watch-item"><img src="longines_logo.jpg"><h2>Longines</h2><p>Elegant Heritage</p></div>
+
+            <div class="watch-item"><img src="jaeger_logo.jpg"><h2>Jaeger-LeCoultre</h2><p>Precision & Craftsmanship</p></div>
+            <div class="watch-item"><img src="citizen_logo.jpg"><h2>Citizen</h2><p>Eco-Friendly Innovation</p></div>
+            <div class="watch-item"><img src="movado_logo.jpg"><h2>Movado</h2><p>Minimalist & Artistic</p></div>
+            <div class="watch-item"><img src="breguet_logo.jpg"><h2>Breguet</h2><p>Historical & Luxury</p></div>
+            <div class="watch-item"><img src="richardmille_logo.jpg"><h2>Richard Mille</h2><p>Ultra-Modern Luxury</p></div>
+
+        </div>
+        <button class="arrow right-arrow" onclick="scrollSlider('all-brands', 300)">&#10095;</button>
+    </div>
+
+    <h2 class="section-title">Men's Watches</h2>
+    <div class="slider-wrapper">
+        <button class="arrow left-arrow" onclick="scrollSlider('mens-watches', -300)">&#10094;</button>
+        <div class="slider-container" id="mens-watches">
+            <!-- men's watches -->
+        </div>
+        <button class="arrow right-arrow" onclick="scrollSlider('mens-watches', 300)">&#10095;</button>
+    </div>
+
+    <h2 class="section-title">Women's Watches</h2>
+    <div class="slider-wrapper">
+        <button class="arrow left-arrow" onclick="scrollSlider('womens-watches', -300)">&#10094;</button>
+        <div class="slider-container" id="womens-watches">
+            <!-- women's watches -->
+        </div>
+        <button class="arrow right-arrow" onclick="scrollSlider('womens-watches', 300)">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 FashOnPoint. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollSlider(id, amount) {
+            document.getElementById(id).scrollBy({ left: amount, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>

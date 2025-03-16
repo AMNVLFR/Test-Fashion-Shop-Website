@@ -1,0 +1,107 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("FASHONPOINTBG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header {
+    background: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.sign-in {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.sign-in:hover {
+    background: white;
+    color: black;
+}
+
+.sign-up {
+    background: #ff4d6d;
+    color: white;
+}
+
+.sign-up:hover {
+    background: #e63950;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}
